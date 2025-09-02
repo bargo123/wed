@@ -1,0 +1,106 @@
+{
+    "@@locale": "ar",
+    "wesal_title": "وِصال",
+    "social_safety_note": "حساباتك الاجتماعية آمنة - لا نقوم بالنشر.",
+    "continue_google": "المتابعة باستخدام جوجل",
+    "continue_apple": "المتابعة باستخدام آبل",
+    "signup_agreement": "بالتسجيل، فإنك توافق على",
+    "terms_of_service": "شروط الخدمة",
+    "privacy_policy": "سياسة الخصوصية.",
+    "and_word": "و",
+    "show_less": "إظهار أقل",
+    "show_more": "إظهار المزيد",
+    "registration": "التسجيل",
+    "add_your_images": "أضف صورك",
+    "skip_for_now": "تخطي الآن",
+    "continue": "متابعة",
+    "university_college": "الجامعة/الكلية",
+    "college_name": "أدخل اسم جامعتك/كلية",
+    "job_title": "Job Title",
+    "enter_your_job_title": "أدخل مسمى وظيفتك",
+    "what_is_your_gender_identity": "ما هي هويتك الجنسية؟",
+    "please_tell_us_your_name": "يرجى إخبارنا باسمك؟",
+    "enter_your_name": "أدخل اسمك",
+    "what_is_your_date_of_birth": "ما هو تاريخ ميلادك؟",
+    "add": "إضافة",
+    "height": "الطول",
+    "height_cm": "الطول (سم)",
+    "cm": "سم",
+    "weight": "الوزن",
+    "weight_kg": "الوزن (كجم)",
+    "kg": "كجم",
+    "smoking": "التدخين",
+    "about_me": "عنّي",
+    "hobbies_and_interests": "الهوايات والاهتمامات",
+    "edit": "تعديل",
+    "name": "الاسم",
+    "@name": {
+        "description": "تسمية لحقل إدخال الاسم"
+    },
+    "date_of_birth": "تاريخ الميلاد",
+    "@date_of_birth": {
+        "description": "تسمية لمنتقي تاريخ الميلاد"
+    },
+    "gender": "الجنس",
+    "@gender": {
+        "description": "تسمية لقائمة الجنس المنسدلة"
+    },
+    "submit": "إرسال",
+    "@submit": {
+        "description": "نص زر الإرسال"
+    },
+    "please_select_gender": "يرجى اختيار الجنس",
+    "@please_select_gender": {
+        "description": "رسالة التحقق عند عدم اختيار الجنس"
+    },
+    "my_photos": "صوري",
+    "remove": "إزالة",
+    "job": "وظيفة",
+    "education": "تعليم",
+    "profile": "الملف الشخصي",
+    "logout": "تسجيل الخروج",
+    "@logout": {
+        "description": "نص زر تسجيل الخروج"
+    },
+    "delete_account": "حذف الحساب",
+    "@delete_account": {
+        "description": "نص زر حذف الحساب"
+    },
+    "no_name": "لا يوجد اسم",
+    "@no_name": {
+        "description": "نص بديل عندما لا يوجد اسم للمستخدم"
+    },
+    "show_profile": "عرض الملف الشخصي",
+    "@show_profile": {
+        "description": "نص لعرض الملف الشخصي"
+    },
+    "app_settings": "إعدادات التطبيق",
+    "@app_settings": {
+        "description": "عنوان قسم إعدادات التطبيق"
+    },
+    "change_language": "تغيير اللغة",
+    "@change_language": {
+        "description": "خيار تغيير اللغة في الإعدادات"
+    },
+    "english": "الإنجليزية",
+    "@english": {
+        "description": "اسم اللغة الإنجليزية"
+    },
+    "notifications": "الإشعارات",
+    "@notifications": {
+        "description": "خيار الإشعارات في الإعدادات"
+    },
+    "about": "حول",
+    "@about": {
+        "description": "عنوان قسم حول"
+    },
+    "terms_and_conditions": "الأحكام والشروط",
+    "@terms_and_conditions": {
+        "description": "عنصر قائمة الأحكام والشروط"
+    },
+    "no_added_hobbies": "لا توجد هوايات مضافة",
+    "home": "الرئيسية",
+    "select_your_avatar": "اختر صورتك الرمزية",
+    "smoker": "مدخن",
+    "non_smoker": "غير مدخن"
+}

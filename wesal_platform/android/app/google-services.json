@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "122167097029",
+    "project_id": "wesal-9744f",
+    "storage_bucket": "wesal-9744f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122167097029:android:75845bd668d58e6286e2ac",
+        "android_client_info": {
+          "package_name": "com.example.wesal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADf2dTn3B-Ytd0DhBWj_0AAV16quxmpX0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

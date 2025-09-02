@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "wesal_platform",
+            "cwd": "wesal_platform",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "wesal_platform (profile mode)",
+            "cwd": "wesal_platform",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "wesal_platform (release mode)",
+            "cwd": "wesal_platform",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "wesal_ui_system",
+            "cwd": "wesal_ui_system",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "wesal_ui_system (profile mode)",
+            "cwd": "wesal_ui_system",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "wesal_ui_system (release mode)",
+            "cwd": "wesal_ui_system",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

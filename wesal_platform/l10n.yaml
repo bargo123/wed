@@ -1,0 +1,8 @@
+arb-dir: lib/l10n/arb
+template-arb-file: en.arb
+output-dir: lib/l10n/gen
+output-class: WesalLocalization
+output-localization-file: wesal_localization.gen.dart
+synthetic-package: false
+nullable-getter: false
+use-escaping: true

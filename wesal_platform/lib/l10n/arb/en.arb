@@ -1,0 +1,110 @@
+{
+    "@@locale": "en",
+    "wesal_title": "Wesal",
+    "social_safety_note": "Your social accounts are safe — we don’t post anything.",
+    "continue_google": "Continue With Google",
+    "continue_apple": "Continue With Apple",
+    "signup_agreement": "By signing up, you agree to our",
+    "terms_of_service": "Terms of Service",
+    "privacy_policy": "Privacy Policy.",
+    "and_word": "and",
+    "show_less": "Show less",
+    "show_more": "Show more",
+    "registration": "Registration",
+    "add_your_images": "Add your images",
+    "skip_for_now": "Skip for now",
+    "continue_text": "Continue",
+    "university_college": "University/College",
+    "college_name": "Enter your university/college name",
+    "job_title": "Job Title",
+    "enter_your_job_title": "Enter your job title",
+    "what_is_your_gender_identity": "What is your gender identity?",
+    "please_tell_us_your_name": "Please tell us your name?",
+    "enter_your_name": "Enter your name",
+    "what_is_your_date_of_birth": "What is your date of birth?",
+    "add": "Add",
+    "height": "Height",
+    "height_cm": "Height (cm)",
+    "cm": "cm",
+    "weight": "Weight",
+    "weight_kg": "Weight (kg)",
+    "kg": "kg",
+    "smoking": "Smoking",
+    "about_me": "About Me",
+    "hobbies_and_interests": "Hobbies and Interests",
+    "edit": "Edit",
+    "name": "Name",
+    "@name": {
+        "description": "Label for the name input field"
+    },
+    "date_of_birth": "Date of Birth",
+    "@date_of_birth": {
+        "description": "Label for the date of birth picker"
+    },
+    "gender": "Gender",
+    "@gender": {
+        "description": "Label for the gender dropdown"
+    },
+    "submit": "Submit",
+    "@submit": {
+        "description": "Submit button text"
+    },
+    "please_select_gender": "Please select a gender",
+    "@please_select_gender": {
+        "description": "Validation message when no gender is selected"
+    },
+    "my_photos": "My Photos",
+    "remove": "Remove",
+    "job": "Job",
+    "education": "Education",
+    "logout": "Logout",
+    "@logout": {
+        "description": "Logout button text"
+    },
+    "delete_account": "Delete Account",
+    "@delete_account": {
+        "description": "Delete account button text"
+    },
+    "profile": "Profile",
+    "@profile": {
+        "description": "Profile section title"
+    },
+    "no_name": "No Name",
+    "@no_name": {
+        "description": "Placeholder text when user has no name"
+    },
+    "show_profile": "Show profile",
+    "@show_profile": {
+        "description": "Text to show profile"
+    },
+    "app_settings": "App Settings",
+    "@app_settings": {
+        "description": "App settings section title"
+    },
+    "change_language": "Change Language",
+    "@change_language": {
+        "description": "Change language setting option"
+    },
+    "english": "English",
+    "@english": {
+        "description": "English language name"
+    },
+    "notifications": "Notifications",
+    "@notifications": {
+        "description": "Notifications setting option"
+    },
+    "about": "About",
+    "@about": {
+        "description": "About section title"
+    },
+    "terms_and_conditions": "Terms and Conditions",
+    "@terms_and_conditions": {
+        "description": "Terms and conditions menu item"
+    },
+    "no_added_hobbies": "No added hobbies",
+    "home": "Home",
+    "no_users_found": "No users found",
+    "selecte_your_avatar": "Select your avatar",
+    "smoker": "Smoker",
+    "non_smoker": "Non-smoker"
+}
