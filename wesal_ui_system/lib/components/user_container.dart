@@ -11,18 +11,20 @@ class UsersContainer extends StatelessWidget {
     this.userName,
     this.isPremium,
     this.userAvatar,
+    this.needPadding = true,
   });
   final String? userImage;
   final String? userAge;
   final String? userName;
   final String? userAvatar;
   final bool? isPremium;
+  final bool needPadding;
 
   @override
   Widget build(BuildContext context) {
     final theme = WesalTheme.of(context);
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: needPadding ? EdgeInsets.all(8.0) : EdgeInsets.zero,
       child: Stack(
         fit: StackFit.expand,
         children: [

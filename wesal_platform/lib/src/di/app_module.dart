@@ -24,6 +24,8 @@ import 'package:wesal/src/domain/usecase/update_user_value_by_key_use_case.dart'
 import 'package:wesal/src/domain/usecase/upload_images_use_case.dart';
 import 'package:wesal/src/presentation/home/bloc/home_bloc.dart';
 import 'package:wesal/src/presentation/login/bloc/login_bloc.dart';
+import 'package:wesal/src/presentation/likes/bloc/likes_bloc.dart';
+import 'package:wesal/src/domain/usecase/get_incoming_likes_use_case.dart';
 import 'package:wesal/src/presentation/profile/bloc/profile_bloc.dart';
 import 'package:wesal/src/presentation/profile_details/bloc/profile_details_bloc.dart';
 import 'package:wesal/src/presentation/settings/bloc/settings_bloc.dart';
@@ -201,4 +203,18 @@ abstract class AppModule {
   @injectable
   IsUserLikedUseCase isUserLikedUseCase(LikeRepository likeRepository) =>
       IsUserLikedUseCase(likeRepository: likeRepository);
+
+  @injectable
+  GetIncomingLikesUseCase getIncomingLikesUseCase(
+    LikeRepository likeRepository,
+  ) => GetIncomingLikesUseCase(likeRepository: likeRepository);
+
+  @injectable
+  LikesBloc likesBloc(
+    GetIncomingLikesUseCase getIncomingLikesUseCase,
+    LikeUserUseCase likeUserUseCase,
+  ) => LikesBloc(
+    getIncomingLikesUseCase: getIncomingLikesUseCase,
+    likeUserUseCase: likeUserUseCase,
+  );
 }

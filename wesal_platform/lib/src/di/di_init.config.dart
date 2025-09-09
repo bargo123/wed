@@ -29,6 +29,8 @@ import 'package:wesal/src/domain/usecase/get_current_user_details_use_case.dart'
     as _i312;
 import 'package:wesal/src/domain/usecase/get_current_user_info_use_case.dart'
     as _i276;
+import 'package:wesal/src/domain/usecase/get_incoming_likes_use_case.dart'
+    as _i561;
 import 'package:wesal/src/domain/usecase/get_user_details_by_id_use_case.dart'
     as _i636;
 import 'package:wesal/src/domain/usecase/get_users_from_firestore_use_case.dart'
@@ -43,6 +45,7 @@ import 'package:wesal/src/domain/usecase/update_user_value_by_key_use_case.dart'
     as _i577;
 import 'package:wesal/src/domain/usecase/upload_images_use_case.dart' as _i616;
 import 'package:wesal/src/presentation/home/bloc/home_bloc.dart' as _i465;
+import 'package:wesal/src/presentation/likes/bloc/likes_bloc.dart' as _i46;
 import 'package:wesal/src/presentation/login/bloc/login_bloc.dart' as _i335;
 import 'package:wesal/src/presentation/profile/bloc/profile_bloc.dart' as _i433;
 import 'package:wesal/src/presentation/profile_details/bloc/profile_details_bloc.dart'
@@ -128,6 +131,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i334.IsUserLikedUseCase>(
       () => appModule.isUserLikedUseCase(gh<_i540.LikeRepository>()),
     );
+    gh.factory<_i561.GetIncomingLikesUseCase>(
+      () => appModule.getIncomingLikesUseCase(gh<_i540.LikeRepository>()),
+    );
     gh.factory<_i500.CheckUserExistanceUseCase>(
       () => appModule.checkUserExistanceUseCase(gh<_i708.UserInfoRepository>()),
     );
@@ -147,6 +153,12 @@ extension GetItInjectableX on _i174.GetIt {
       () => appModule.loginBloc(
         gh<_i1061.GoogleSigninUseCase>(),
         gh<_i500.CheckUserExistanceUseCase>(),
+      ),
+    );
+    gh.factory<_i46.LikesBloc>(
+      () => appModule.likesBloc(
+        gh<_i561.GetIncomingLikesUseCase>(),
+        gh<_i711.LikeUserUseCase>(),
       ),
     );
     gh.factory<_i465.HomeBloc>(

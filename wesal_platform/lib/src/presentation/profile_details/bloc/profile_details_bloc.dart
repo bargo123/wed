@@ -87,6 +87,14 @@ class ProfileDetailsBloc
     Emitter<ProfileDetailsState> emit,
   ) async {
     final likeRequest = await _likeUserUseCase(event.id).run();
-    likeRequest.fold((failure) {}, (isLiked) {});
+
+    likeRequest.fold(
+      (failure) {
+        print('failure: $failure');
+      },
+      (isLiked) {
+        print('isLiked');
+      },
+    );
   }
 }

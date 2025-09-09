@@ -11,7 +11,8 @@ import 'package:wesal_ui_system/typography/text_style.dart';
 import 'package:wesal_ui_system/typography/wesal_text.dart';
 
 class ProfileDetailsBody extends StatelessWidget {
-  const ProfileDetailsBody({super.key});
+  const ProfileDetailsBody({super.key, required this.id});
+  final String id;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,11 @@ class ProfileDetailsBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ProfileCard(user: state.user!, isLiked: state.isUserLiked!),
+                ProfileCard(
+                  user: state.user!,
+                  isLiked: state.isUserLiked!,
+                  id: id,
+                ),
                 const SizedBox(height: 50),
                 ProfileHobbiesSection(user: state.user),
                 const SizedBox(height: 20),

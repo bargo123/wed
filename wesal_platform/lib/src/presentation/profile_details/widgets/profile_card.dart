@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:like_button/like_button.dart';
 import 'package:wesal/core/utils/age_calculater.dart';
 import 'package:wesal/src/data/user_details_info_model.dart';
+import 'package:wesal/src/presentation/profile_details/bloc/profile_details_bloc.dart';
 import 'package:wesal/src/presentation/profile_details/widgets/profile_avatar.dart';
 import 'package:wesal/src/presentation/profile_details/widgets/profile_info_row.dart';
 import 'package:wesal_ui_system/theme/wesal_theme.dart';
@@ -10,9 +12,15 @@ import 'package:wesal_ui_system/typography/text_style.dart';
 import 'package:wesal_ui_system/typography/wesal_text.dart';
 
 class ProfileCard extends StatelessWidget {
-  const ProfileCard({super.key, required this.user, required this.isLiked});
+  const ProfileCard({
+    super.key,
+    required this.user,
+    required this.isLiked,
+    required this.id,
+  });
   final UserDetailsInfoModel? user; // Replace with your User model type
   final bool isLiked;
+  final String id;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +46,7 @@ class ProfileCard extends StatelessWidget {
           const SizedBox(height: 16),
           _buildNameAndAge(theme),
           const SizedBox(height: 8),
-          _buildInfoRow(theme),
+          _buildInfoRow(theme, context),
         ],
       ),
     );
@@ -52,7 +60,7 @@ class ProfileCard extends StatelessWidget {
     );
   }
 
-  Widget _buildInfoRow(WesalThemeData theme) {
+  Widget _buildInfoRow(WesalThemeData theme, BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -60,13 +68,25 @@ class ProfileCard extends StatelessWidget {
           occupation: user?.accubation ?? "",
           education: user?.education ?? "",
         ),
-        _buildLikeButton(theme),
+        _buildLikeButton(theme, context, id),
       ],
     );
   }
 
-  Widget _buildLikeButton(WesalThemeData theme) {
+  Widget _buildLikeButton(
+    WesalThemeData theme,
+    BuildContext context,
+    String id,
+  ) {
     return LikeButton(
+      onTap: (liked) async {
+        print('liked: $id');
+        context.read<ProfileDetailsBloc>().add(
+          ProfileDetailsEvent.likeUser(id),
+        );
+
+        return !liked; // optimistic toggle; stream will correct if needed
+      },
       size: 60,
       isLiked: isLiked,
       likeBuilder: (isLiked) => Container(
@@ -74,6 +94,7 @@ class ProfileCard extends StatelessWidget {
           shape: BoxShape.circle,
           color: theme.colors.styleRed,
         ),
+
         child: Icon(
           Icons.favorite,
           color: isLiked ? theme.colors.datingModePrimary : theme.colors.red3,

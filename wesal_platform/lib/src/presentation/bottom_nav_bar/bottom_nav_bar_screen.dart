@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lazy_load_indexed_stack/lazy_load_indexed_stack.dart';
 import 'package:wesal/gen/assets.gen.dart';
 import 'package:wesal/src/presentation/home/home_screen.dart';
+import 'package:wesal/src/presentation/likes/likes_screen.dart';
 import 'package:wesal/src/presentation/settings/settings_screen.dart';
 import 'package:wesal_ui_system/components/wesal_bottom_nav_bar/wesal_bottom_navbar.dart';
 import 'package:wesal_ui_system/wesal_ui_system.dart';
@@ -66,7 +67,7 @@ class _TabContentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return LazyLoadIndexedStack(
       index: tabIndex,
-      children: [Placeholder(), HomeScreen(), SettingsScreen()],
+      children: [LikesScreen(), HomeScreen(), SettingsScreen()],
     );
   }
 }

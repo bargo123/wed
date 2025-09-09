@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'home_bloc.dart';
+part of 'likes_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,7 +12,7 @@ part of 'home_bloc.dart';
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
-mixin _$HomeEvent {
+mixin _$LikesEvent {
 
 
 
@@ -20,9 +20,8 @@ mixin _$HomeEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeEvent);
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LikesEvent);
 }
-
 
 
 @override
@@ -30,20 +29,20 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'HomeEvent()';
+  return 'LikesEvent()';
 }
 
 
 }
 
 /// @nodoc
-class $HomeEventCopyWith<$Res>  {
-$HomeEventCopyWith(HomeEvent _, $Res Function(HomeEvent) __);
+class $LikesEventCopyWith<$Res>  {
+$LikesEventCopyWith(LikesEvent _, $Res Function(LikesEvent) __);
 }
 
 
-/// Adds pattern-matching-related methods to [HomeEvent].
-extension HomeEventPatterns on HomeEvent {
+/// Adds pattern-matching-related methods to [LikesEvent].
+extension LikesEventPatterns on LikesEvent {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -56,12 +55,13 @@ extension HomeEventPatterns on HomeEvent {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _GetUsers value)?  getUsers,TResult Function( _SignOut value)?  signOut,TResult Function( _EmitUsers value)?  emitUsers,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _Subscribe value)?  subscribe,TResult Function( _LikeBack value)?  likeBack,TResult Function( _Remove value)?  remove,TResult Function( _EmitUsers value)?  emitUsers,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _GetUsers() when getUsers != null:
-return getUsers(_that);case _SignOut() when signOut != null:
-return signOut(_that);case _EmitUsers() when emitUsers != null:
+case _Subscribe() when subscribe != null:
+return subscribe(_that);case _LikeBack() when likeBack != null:
+return likeBack(_that);case _Remove() when remove != null:
+return remove(_that);case _EmitUsers() when emitUsers != null:
 return emitUsers(_that);case _:
   return orElse();
 
@@ -80,12 +80,13 @@ return emitUsers(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _GetUsers value)  getUsers,required TResult Function( _SignOut value)  signOut,required TResult Function( _EmitUsers value)  emitUsers,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _Subscribe value)  subscribe,required TResult Function( _LikeBack value)  likeBack,required TResult Function( _Remove value)  remove,required TResult Function( _EmitUsers value)  emitUsers,}){
 final _that = this;
 switch (_that) {
-case _GetUsers():
-return getUsers(_that);case _SignOut():
-return signOut(_that);case _EmitUsers():
+case _Subscribe():
+return subscribe(_that);case _LikeBack():
+return likeBack(_that);case _Remove():
+return remove(_that);case _EmitUsers():
 return emitUsers(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -103,12 +104,13 @@ return emitUsers(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _GetUsers value)?  getUsers,TResult? Function( _SignOut value)?  signOut,TResult? Function( _EmitUsers value)?  emitUsers,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _Subscribe value)?  subscribe,TResult? Function( _LikeBack value)?  likeBack,TResult? Function( _Remove value)?  remove,TResult? Function( _EmitUsers value)?  emitUsers,}){
 final _that = this;
 switch (_that) {
-case _GetUsers() when getUsers != null:
-return getUsers(_that);case _SignOut() when signOut != null:
-return signOut(_that);case _EmitUsers() when emitUsers != null:
+case _Subscribe() when subscribe != null:
+return subscribe(_that);case _LikeBack() when likeBack != null:
+return likeBack(_that);case _Remove() when remove != null:
+return remove(_that);case _EmitUsers() when emitUsers != null:
 return emitUsers(_that);case _:
   return null;
 
@@ -126,12 +128,13 @@ return emitUsers(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  getUsers,TResult Function( void Function() onSignoutSuccess)?  signOut,TResult Function( List<UserInfoModel> userInfoModel)?  emitUsers,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  subscribe,TResult Function( String userId)?  likeBack,TResult Function( String userId)?  remove,TResult Function( Map<bool, UserInfoModel> users)?  emitUsers,required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _GetUsers() when getUsers != null:
-return getUsers();case _SignOut() when signOut != null:
-return signOut(_that.onSignoutSuccess);case _EmitUsers() when emitUsers != null:
-return emitUsers(_that.userInfoModel);case _:
+case _Subscribe() when subscribe != null:
+return subscribe();case _LikeBack() when likeBack != null:
+return likeBack(_that.userId);case _Remove() when remove != null:
+return remove(_that.userId);case _EmitUsers() when emitUsers != null:
+return emitUsers(_that.users);case _:
   return orElse();
 
 }
@@ -149,12 +152,13 @@ return emitUsers(_that.userInfoModel);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  getUsers,required TResult Function( void Function() onSignoutSuccess)  signOut,required TResult Function( List<UserInfoModel> userInfoModel)  emitUsers,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  subscribe,required TResult Function( String userId)  likeBack,required TResult Function( String userId)  remove,required TResult Function( Map<bool, UserInfoModel> users)  emitUsers,}) {final _that = this;
 switch (_that) {
-case _GetUsers():
-return getUsers();case _SignOut():
-return signOut(_that.onSignoutSuccess);case _EmitUsers():
-return emitUsers(_that.userInfoModel);case _:
+case _Subscribe():
+return subscribe();case _LikeBack():
+return likeBack(_that.userId);case _Remove():
+return remove(_that.userId);case _EmitUsers():
+return emitUsers(_that.users);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -171,12 +175,13 @@ return emitUsers(_that.userInfoModel);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  getUsers,TResult? Function( void Function() onSignoutSuccess)?  signOut,TResult? Function( List<UserInfoModel> userInfoModel)?  emitUsers,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  subscribe,TResult? Function( String userId)?  likeBack,TResult? Function( String userId)?  remove,TResult? Function( Map<bool, UserInfoModel> users)?  emitUsers,}) {final _that = this;
 switch (_that) {
-case _GetUsers() when getUsers != null:
-return getUsers();case _SignOut() when signOut != null:
-return signOut(_that.onSignoutSuccess);case _EmitUsers() when emitUsers != null:
-return emitUsers(_that.userInfoModel);case _:
+case _Subscribe() when subscribe != null:
+return subscribe();case _LikeBack() when likeBack != null:
+return likeBack(_that.userId);case _Remove() when remove != null:
+return remove(_that.userId);case _EmitUsers() when emitUsers != null:
+return emitUsers(_that.users);case _:
   return null;
 
 }
@@ -187,8 +192,8 @@ return emitUsers(_that.userInfoModel);case _:
 /// @nodoc
 
 
-class _GetUsers implements HomeEvent {
-  const _GetUsers();
+class _Subscribe implements LikesEvent {
+  const _Subscribe();
   
 
 
@@ -198,7 +203,7 @@ class _GetUsers implements HomeEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetUsers);
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Subscribe);
 }
 
 
@@ -207,7 +212,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'HomeEvent.getUsers()';
+  return 'LikesEvent.subscribe()';
 }
 
 
@@ -219,43 +224,43 @@ String toString() {
 /// @nodoc
 
 
-class _SignOut implements HomeEvent {
-  const _SignOut({required this.onSignoutSuccess});
+class _LikeBack implements LikesEvent {
+  const _LikeBack(this.userId);
   
 
- final  void Function() onSignoutSuccess;
+ final  String userId;
 
-/// Create a copy of HomeEvent
+/// Create a copy of LikesEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$SignOutCopyWith<_SignOut> get copyWith => __$SignOutCopyWithImpl<_SignOut>(this, _$identity);
+_$LikeBackCopyWith<_LikeBack> get copyWith => __$LikeBackCopyWithImpl<_LikeBack>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SignOut&&(identical(other.onSignoutSuccess, onSignoutSuccess) || other.onSignoutSuccess == onSignoutSuccess));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LikeBack&&(identical(other.userId, userId) || other.userId == userId));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,onSignoutSuccess);
+int get hashCode => Object.hash(runtimeType,userId);
 
 @override
 String toString() {
-  return 'HomeEvent.signOut(onSignoutSuccess: $onSignoutSuccess)';
+  return 'LikesEvent.likeBack(userId: $userId)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$SignOutCopyWith<$Res> implements $HomeEventCopyWith<$Res> {
-  factory _$SignOutCopyWith(_SignOut value, $Res Function(_SignOut) _then) = __$SignOutCopyWithImpl;
+abstract mixin class _$LikeBackCopyWith<$Res> implements $LikesEventCopyWith<$Res> {
+  factory _$LikeBackCopyWith(_LikeBack value, $Res Function(_LikeBack) _then) = __$LikeBackCopyWithImpl;
 @useResult
 $Res call({
- void Function() onSignoutSuccess
+ String userId
 });
 
 
@@ -263,19 +268,19 @@ $Res call({
 
 }
 /// @nodoc
-class __$SignOutCopyWithImpl<$Res>
-    implements _$SignOutCopyWith<$Res> {
-  __$SignOutCopyWithImpl(this._self, this._then);
+class __$LikeBackCopyWithImpl<$Res>
+    implements _$LikeBackCopyWith<$Res> {
+  __$LikeBackCopyWithImpl(this._self, this._then);
 
-  final _SignOut _self;
-  final $Res Function(_SignOut) _then;
+  final _LikeBack _self;
+  final $Res Function(_LikeBack) _then;
 
-/// Create a copy of HomeEvent
+/// Create a copy of LikesEvent
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? onSignoutSuccess = null,}) {
-  return _then(_SignOut(
-onSignoutSuccess: null == onSignoutSuccess ? _self.onSignoutSuccess : onSignoutSuccess // ignore: cast_nullable_to_non_nullable
-as void Function(),
+@pragma('vm:prefer-inline') $Res call({Object? userId = null,}) {
+  return _then(_LikeBack(
+null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
   ));
 }
 
@@ -285,19 +290,85 @@ as void Function(),
 /// @nodoc
 
 
-class _EmitUsers implements HomeEvent {
-  const _EmitUsers(final  List<UserInfoModel> userInfoModel): _userInfoModel = userInfoModel;
+class _Remove implements LikesEvent {
+  const _Remove(this.userId);
   
 
- final  List<UserInfoModel> _userInfoModel;
- List<UserInfoModel> get userInfoModel {
-  if (_userInfoModel is EqualUnmodifiableListView) return _userInfoModel;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_userInfoModel);
+ final  String userId;
+
+/// Create a copy of LikesEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$RemoveCopyWith<_Remove> get copyWith => __$RemoveCopyWithImpl<_Remove>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Remove&&(identical(other.userId, userId) || other.userId == userId));
 }
 
 
-/// Create a copy of HomeEvent
+@override
+int get hashCode => Object.hash(runtimeType,userId);
+
+@override
+String toString() {
+  return 'LikesEvent.remove(userId: $userId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$RemoveCopyWith<$Res> implements $LikesEventCopyWith<$Res> {
+  factory _$RemoveCopyWith(_Remove value, $Res Function(_Remove) _then) = __$RemoveCopyWithImpl;
+@useResult
+$Res call({
+ String userId
+});
+
+
+
+
+}
+/// @nodoc
+class __$RemoveCopyWithImpl<$Res>
+    implements _$RemoveCopyWith<$Res> {
+  __$RemoveCopyWithImpl(this._self, this._then);
+
+  final _Remove _self;
+  final $Res Function(_Remove) _then;
+
+/// Create a copy of LikesEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? userId = null,}) {
+  return _then(_Remove(
+null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class _EmitUsers implements LikesEvent {
+  const _EmitUsers(final  Map<bool, UserInfoModel> users): _users = users;
+  
+
+ final  Map<bool, UserInfoModel> _users;
+ Map<bool, UserInfoModel> get users {
+  if (_users is EqualUnmodifiableMapView) return _users;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableMapView(_users);
+}
+
+
+/// Create a copy of LikesEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
@@ -307,27 +378,27 @@ _$EmitUsersCopyWith<_EmitUsers> get copyWith => __$EmitUsersCopyWithImpl<_EmitUs
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmitUsers&&const DeepCollectionEquality().equals(other._userInfoModel, _userInfoModel));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmitUsers&&const DeepCollectionEquality().equals(other._users, _users));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_userInfoModel));
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_users));
 
 @override
 String toString() {
-  return 'HomeEvent.emitUsers(userInfoModel: $userInfoModel)';
+  return 'LikesEvent.emitUsers(users: $users)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$EmitUsersCopyWith<$Res> implements $HomeEventCopyWith<$Res> {
+abstract mixin class _$EmitUsersCopyWith<$Res> implements $LikesEventCopyWith<$Res> {
   factory _$EmitUsersCopyWith(_EmitUsers value, $Res Function(_EmitUsers) _then) = __$EmitUsersCopyWithImpl;
 @useResult
 $Res call({
- List<UserInfoModel> userInfoModel
+ Map<bool, UserInfoModel> users
 });
 
 
@@ -342,12 +413,12 @@ class __$EmitUsersCopyWithImpl<$Res>
   final _EmitUsers _self;
   final $Res Function(_EmitUsers) _then;
 
-/// Create a copy of HomeEvent
+/// Create a copy of LikesEvent
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? userInfoModel = null,}) {
+@pragma('vm:prefer-inline') $Res call({Object? users = null,}) {
   return _then(_EmitUsers(
-null == userInfoModel ? _self._userInfoModel : userInfoModel // ignore: cast_nullable_to_non_nullable
-as List<UserInfoModel>,
+null == users ? _self._users : users // ignore: cast_nullable_to_non_nullable
+as Map<bool, UserInfoModel>,
   ));
 }
 
@@ -355,20 +426,20 @@ as List<UserInfoModel>,
 }
 
 /// @nodoc
-mixin _$HomeState {
+mixin _$LikesState {
 
- List<UserInfoModel> get users; HomeProcessState get processState;
-/// Create a copy of HomeState
+ Map<bool, UserInfoModel> get users; LikesProcessState get processState;
+/// Create a copy of LikesState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$HomeStateCopyWith<HomeState> get copyWith => _$HomeStateCopyWithImpl<HomeState>(this as HomeState, _$identity);
+$LikesStateCopyWith<LikesState> get copyWith => _$LikesStateCopyWithImpl<LikesState>(this as LikesState, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeState&&const DeepCollectionEquality().equals(other.users, users)&&(identical(other.processState, processState) || other.processState == processState));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LikesState&&const DeepCollectionEquality().equals(other.users, users)&&(identical(other.processState, processState) || other.processState == processState));
 }
 
 
@@ -377,56 +448,56 @@ int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(
 
 @override
 String toString() {
-  return 'HomeState(users: $users, processState: $processState)';
+  return 'LikesState(users: $users, processState: $processState)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $HomeStateCopyWith<$Res>  {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) _then) = _$HomeStateCopyWithImpl;
+abstract mixin class $LikesStateCopyWith<$Res>  {
+  factory $LikesStateCopyWith(LikesState value, $Res Function(LikesState) _then) = _$LikesStateCopyWithImpl;
 @useResult
 $Res call({
- List<UserInfoModel> users, HomeProcessState processState
+ Map<bool, UserInfoModel> users, LikesProcessState processState
 });
 
 
-$HomeProcessStateCopyWith<$Res> get processState;
+$LikesProcessStateCopyWith<$Res> get processState;
 
 }
 /// @nodoc
-class _$HomeStateCopyWithImpl<$Res>
-    implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._self, this._then);
+class _$LikesStateCopyWithImpl<$Res>
+    implements $LikesStateCopyWith<$Res> {
+  _$LikesStateCopyWithImpl(this._self, this._then);
 
-  final HomeState _self;
-  final $Res Function(HomeState) _then;
+  final LikesState _self;
+  final $Res Function(LikesState) _then;
 
-/// Create a copy of HomeState
+/// Create a copy of LikesState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? users = null,Object? processState = null,}) {
   return _then(_self.copyWith(
 users: null == users ? _self.users : users // ignore: cast_nullable_to_non_nullable
-as List<UserInfoModel>,processState: null == processState ? _self.processState : processState // ignore: cast_nullable_to_non_nullable
-as HomeProcessState,
+as Map<bool, UserInfoModel>,processState: null == processState ? _self.processState : processState // ignore: cast_nullable_to_non_nullable
+as LikesProcessState,
   ));
 }
-/// Create a copy of HomeState
+/// Create a copy of LikesState
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$HomeProcessStateCopyWith<$Res> get processState {
+$LikesProcessStateCopyWith<$Res> get processState {
   
-  return $HomeProcessStateCopyWith<$Res>(_self.processState, (value) {
+  return $LikesProcessStateCopyWith<$Res>(_self.processState, (value) {
     return _then(_self.copyWith(processState: value));
   });
 }
 }
 
 
-/// Adds pattern-matching-related methods to [HomeState].
-extension HomeStatePatterns on HomeState {
+/// Adds pattern-matching-related methods to [LikesState].
+extension LikesStatePatterns on LikesState {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -439,10 +510,10 @@ extension HomeStatePatterns on HomeState {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _HomeState value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _LikesState value)?  $default,{required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _HomeState() when $default != null:
+case _LikesState() when $default != null:
 return $default(_that);case _:
   return orElse();
 
@@ -461,10 +532,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _HomeState value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _LikesState value)  $default,){
 final _that = this;
 switch (_that) {
-case _HomeState():
+case _LikesState():
 return $default(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
@@ -479,10 +550,10 @@ return $default(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _HomeState value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _LikesState value)?  $default,){
 final _that = this;
 switch (_that) {
-case _HomeState() when $default != null:
+case _LikesState() when $default != null:
 return $default(_that);case _:
   return null;
 
@@ -500,9 +571,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<UserInfoModel> users,  HomeProcessState processState)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Map<bool, UserInfoModel> users,  LikesProcessState processState)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _HomeState() when $default != null:
+case _LikesState() when $default != null:
 return $default(_that.users,_that.processState);case _:
   return orElse();
 
@@ -521,9 +592,9 @@ return $default(_that.users,_that.processState);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<UserInfoModel> users,  HomeProcessState processState)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Map<bool, UserInfoModel> users,  LikesProcessState processState)  $default,) {final _that = this;
 switch (_that) {
-case _HomeState():
+case _LikesState():
 return $default(_that.users,_that.processState);}
 }
 /// A variant of `when` that fallback to returning `null`
@@ -538,9 +609,9 @@ return $default(_that.users,_that.processState);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<UserInfoModel> users,  HomeProcessState processState)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Map<bool, UserInfoModel> users,  LikesProcessState processState)?  $default,) {final _that = this;
 switch (_that) {
-case _HomeState() when $default != null:
+case _LikesState() when $default != null:
 return $default(_that.users,_that.processState);case _:
   return null;
 
@@ -552,30 +623,30 @@ return $default(_that.users,_that.processState);case _:
 /// @nodoc
 
 
-class _HomeState implements HomeState {
-  const _HomeState({final  List<UserInfoModel> users = const [], this.processState = const HomeProcessState.loading()}): _users = users;
+class _LikesState implements LikesState {
+  const _LikesState({final  Map<bool, UserInfoModel> users = const {}, this.processState = const LikesProcessState.loading()}): _users = users;
   
 
- final  List<UserInfoModel> _users;
-@override@JsonKey() List<UserInfoModel> get users {
-  if (_users is EqualUnmodifiableListView) return _users;
+ final  Map<bool, UserInfoModel> _users;
+@override@JsonKey() Map<bool, UserInfoModel> get users {
+  if (_users is EqualUnmodifiableMapView) return _users;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_users);
+  return EqualUnmodifiableMapView(_users);
 }
 
-@override@JsonKey() final  HomeProcessState processState;
+@override@JsonKey() final  LikesProcessState processState;
 
-/// Create a copy of HomeState
+/// Create a copy of LikesState
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$HomeStateCopyWith<_HomeState> get copyWith => __$HomeStateCopyWithImpl<_HomeState>(this, _$identity);
+_$LikesStateCopyWith<_LikesState> get copyWith => __$LikesStateCopyWithImpl<_LikesState>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HomeState&&const DeepCollectionEquality().equals(other._users, _users)&&(identical(other.processState, processState) || other.processState == processState));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LikesState&&const DeepCollectionEquality().equals(other._users, _users)&&(identical(other.processState, processState) || other.processState == processState));
 }
 
 
@@ -584,56 +655,56 @@ int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(
 
 @override
 String toString() {
-  return 'HomeState(users: $users, processState: $processState)';
+  return 'LikesState(users: $users, processState: $processState)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
-  factory _$HomeStateCopyWith(_HomeState value, $Res Function(_HomeState) _then) = __$HomeStateCopyWithImpl;
+abstract mixin class _$LikesStateCopyWith<$Res> implements $LikesStateCopyWith<$Res> {
+  factory _$LikesStateCopyWith(_LikesState value, $Res Function(_LikesState) _then) = __$LikesStateCopyWithImpl;
 @override @useResult
 $Res call({
- List<UserInfoModel> users, HomeProcessState processState
+ Map<bool, UserInfoModel> users, LikesProcessState processState
 });
 
 
-@override $HomeProcessStateCopyWith<$Res> get processState;
+@override $LikesProcessStateCopyWith<$Res> get processState;
 
 }
 /// @nodoc
-class __$HomeStateCopyWithImpl<$Res>
-    implements _$HomeStateCopyWith<$Res> {
-  __$HomeStateCopyWithImpl(this._self, this._then);
+class __$LikesStateCopyWithImpl<$Res>
+    implements _$LikesStateCopyWith<$Res> {
+  __$LikesStateCopyWithImpl(this._self, this._then);
 
-  final _HomeState _self;
-  final $Res Function(_HomeState) _then;
+  final _LikesState _self;
+  final $Res Function(_LikesState) _then;
 
-/// Create a copy of HomeState
+/// Create a copy of LikesState
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? users = null,Object? processState = null,}) {
-  return _then(_HomeState(
+  return _then(_LikesState(
 users: null == users ? _self._users : users // ignore: cast_nullable_to_non_nullable
-as List<UserInfoModel>,processState: null == processState ? _self.processState : processState // ignore: cast_nullable_to_non_nullable
-as HomeProcessState,
+as Map<bool, UserInfoModel>,processState: null == processState ? _self.processState : processState // ignore: cast_nullable_to_non_nullable
+as LikesProcessState,
   ));
 }
 
-/// Create a copy of HomeState
+/// Create a copy of LikesState
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$HomeProcessStateCopyWith<$Res> get processState {
+$LikesProcessStateCopyWith<$Res> get processState {
   
-  return $HomeProcessStateCopyWith<$Res>(_self.processState, (value) {
+  return $LikesProcessStateCopyWith<$Res>(_self.processState, (value) {
     return _then(_self.copyWith(processState: value));
   });
 }
 }
 
 /// @nodoc
-mixin _$HomeProcessState {
+mixin _$LikesProcessState {
 
 
 
@@ -641,7 +712,7 @@ mixin _$HomeProcessState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeProcessState);
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LikesProcessState);
 }
 
 
@@ -650,20 +721,20 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'HomeProcessState()';
+  return 'LikesProcessState()';
 }
 
 
 }
 
 /// @nodoc
-class $HomeProcessStateCopyWith<$Res>  {
-$HomeProcessStateCopyWith(HomeProcessState _, $Res Function(HomeProcessState) __);
+class $LikesProcessStateCopyWith<$Res>  {
+$LikesProcessStateCopyWith(LikesProcessState _, $Res Function(LikesProcessState) __);
 }
 
 
-/// Adds pattern-matching-related methods to [HomeProcessState].
-extension HomeProcessStatePatterns on HomeProcessState {
+/// Adds pattern-matching-related methods to [LikesProcessState].
+extension LikesProcessStatePatterns on LikesProcessState {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -813,7 +884,7 @@ return error(_that.message);case _:
 /// @nodoc
 
 
-class _Loading implements HomeProcessState {
+class _Loading implements LikesProcessState {
   const _Loading();
   
 
@@ -833,7 +904,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'HomeProcessState.loading()';
+  return 'LikesProcessState.loading()';
 }
 
 
@@ -845,7 +916,7 @@ String toString() {
 /// @nodoc
 
 
-class _Success implements HomeProcessState {
+class _Success implements LikesProcessState {
   const _Success();
   
 
@@ -865,7 +936,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'HomeProcessState.success()';
+  return 'LikesProcessState.success()';
 }
 
 
@@ -877,7 +948,7 @@ String toString() {
 /// @nodoc
 
 
-class _Empty implements HomeProcessState {
+class _Empty implements LikesProcessState {
   const _Empty();
   
 
@@ -897,7 +968,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'HomeProcessState.empty()';
+  return 'LikesProcessState.empty()';
 }
 
 
@@ -909,13 +980,13 @@ String toString() {
 /// @nodoc
 
 
-class _Error implements HomeProcessState {
+class _Error implements LikesProcessState {
   const _Error(this.message);
   
 
  final  String message;
 
-/// Create a copy of HomeProcessState
+/// Create a copy of LikesProcessState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
@@ -934,14 +1005,14 @@ int get hashCode => Object.hash(runtimeType,message);
 
 @override
 String toString() {
-  return 'HomeProcessState.error(message: $message)';
+  return 'LikesProcessState.error(message: $message)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$ErrorCopyWith<$Res> implements $HomeProcessStateCopyWith<$Res> {
+abstract mixin class _$ErrorCopyWith<$Res> implements $LikesProcessStateCopyWith<$Res> {
   factory _$ErrorCopyWith(_Error value, $Res Function(_Error) _then) = __$ErrorCopyWithImpl;
 @useResult
 $Res call({
@@ -960,7 +1031,7 @@ class __$ErrorCopyWithImpl<$Res>
   final _Error _self;
   final $Res Function(_Error) _then;
 
-/// Create a copy of HomeProcessState
+/// Create a copy of LikesProcessState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
   return _then(_Error(

@@ -25,7 +25,7 @@ class ProfileDetailsScreen extends StatelessWidget {
         child: Scaffold(
           appBar: const ProfileDetailsAppBar(),
           backgroundColor: theme.colors.whiteColor,
-          body: SingleChildScrollView(child: const ProfileDetailsBody()),
+          body: SingleChildScrollView(child: ProfileDetailsBody(id: id)),
         ),
       ),
     );
